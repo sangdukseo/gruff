@@ -115,13 +115,13 @@ private
       points << center_x + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.cos(current_angle)
       points << center_y + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.sin(current_angle)
       if current_angle == 0
-        draw_label(center_x + 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI / 2
-        draw_label(center_x + 35, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 35, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI
-        draw_label(center_x - 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x - 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI + (Math::PI / 2)
-        draw_label(center_x + 35, center_y - 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 35, center_y - 20, current_angle, data_row[DATA_VALUES_INDEX].first, data_row[DATA_VALUES_INDEX].first.to_s)
       end
       
       current_angle += additive_angle
