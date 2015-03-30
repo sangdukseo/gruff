@@ -806,7 +806,7 @@ module Gruff
       @d.gravity = NorthGravity
       @d = @d.annotate_scaled(@base_image,
                               @raw_columns, 1.0,
-                              -750, @top_margin + 50,
+                              -750, @top_margin,
                               @title, @scale)
     end
 
