@@ -114,7 +114,8 @@ private
     @data.each do |data_row|
       points << center_x + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.cos(current_angle)
       points << center_y + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.sin(current_angle)
-      current_angle += additive_angle
+      p "current_angle"
+      p current_angle
       if current_angle == 0
         draw_label(center_x, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == 90
@@ -124,6 +125,8 @@ private
       elsif current_angle == 270
         draw_label(center_x + 20, center_y, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       end
+      
+      current_angle += additive_angle
     end
 
     @d.stroke_width 1.0
