@@ -674,28 +674,28 @@ module Gruff
         end
       end
 
-      # # Submitted by a contibutor...the utility escapes me
-      # i = 0
-      # @additional_line_values.each do |value|
-      #   @increment_scaled = @graph_height.to_f / (@maximum_value.to_f / value)
-      #
-      #   y = @graph_top + @graph_height - @increment_scaled
-      #
-      #   @d = @d.stroke(@additional_line_colors[i])
-      #   @d = @d.line(@graph_left, y, @graph_right, y)
-      #
-      #
-      #   @d.fill = @additional_line_colors[i]
-      #   @d.font = @font if @font
-      #   @d.stroke('transparent')
-      #   @d.pointsize = scale_fontsize(@marker_font_size)
-      #   @d.gravity = EastGravity
-      #   @d = @d.annotate_scaled( @base_image,
-      #                     100, 20,
-      #                     -10, y - (@marker_font_size/2.0),
-      #                     "", @scale)
-      #   i += 1
-      # end
+      # Submitted by a contibutor...the utility escapes me
+      i = 0
+      @additional_line_values.each do |value|
+        @increment_scaled = @graph_height.to_f / (@maximum_value.to_f / value)
+      
+        y = @graph_top + @graph_height - @increment_scaled
+      
+        @d = @d.stroke(@additional_line_colors[i])
+        @d = @d.line(@graph_left, y, @graph_right, y)
+      
+      
+        @d.fill = @additional_line_colors[i]
+        @d.font = @font if @font
+        @d.stroke('transparent')
+        @d.pointsize = scale_fontsize(@marker_font_size)
+        @d.gravity = EastGravity
+        @d = @d.annotate_scaled( @base_image,
+                          100, 20,
+                          -10, y - (@marker_font_size/2.0),
+                          "", @scale)
+        i += 1
+      end
 
       @d = @d.stroke_antialias true
     end
