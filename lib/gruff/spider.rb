@@ -118,11 +118,11 @@ private
       p current_angle
       if current_angle == 0
         draw_label(center_x, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
-      elsif current_angle == 90
+      elsif current_angle == Math::PI / 2
         draw_label(center_x + 20, center_y, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
-      elsif current_angle == 180
+      elsif current_angle == Math::PI
         draw_label(center_x, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
-      elsif current_angle == 270
+      elsif current_angle == Math::PI + (Math::PI / 2)
         draw_label(center_x + 20, center_y, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       end
       
