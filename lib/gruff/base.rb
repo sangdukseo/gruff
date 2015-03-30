@@ -801,7 +801,7 @@ module Gruff
       @d.fill = @font_color
       @d.font = @font if @font
       @d.stroke('transparent')
-      @d.pointsize = scale_fontsize(12)
+      @d.pointsize = scale_fontsize(@title_font_size)
       @d.font_weight = BoldWeight
       @d.gravity = NorthGravity
       @d = @d.annotate_scaled(@base_image,
