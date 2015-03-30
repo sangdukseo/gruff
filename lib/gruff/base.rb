@@ -573,7 +573,7 @@ module Gruff
           @marker_caps_height + LABEL_MARGIN
       # FIXME: Consider chart types other than bar
       @graph_bottom = @raw_rows - @graph_bottom_margin - x_axis_label_height - @label_stagger_height
-      @graph_height = @graph_bottom - @graph_top - 60
+      @graph_height = @graph_bottom - @graph_top - 40
     end
 
     # Draw the optional labels for the x axis and y axis.
@@ -806,7 +806,7 @@ module Gruff
       @d.gravity = NorthGravity
       @d = @d.annotate_scaled(@base_image,
                               @raw_columns, 1.0,
-                              -200, @top_margin,
+                              -300, @top_margin,
                               @title, @scale)
     end
 
