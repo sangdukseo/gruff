@@ -115,7 +115,7 @@ private
       points << center_x + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.cos(current_angle)
       points << center_y + normalize_points(data_row[DATA_VALUES_INDEX].first) * Math.sin(current_angle)
       current_angle += additive_angle
-      draw_label(center_x, center_y, current_angle, data_row[DATA_VALUES_INDEX].first, data_row[DATA_VALUES_INDEX].first.to_s)
+      draw_label(center_x, center_y, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
     end
 
     @d.stroke_width 1.0
