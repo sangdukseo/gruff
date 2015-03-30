@@ -117,13 +117,13 @@ private
       p "current_angle"
       p current_angle
       if current_angle == 0
-        draw_label(center_x + 10, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI / 2
-        draw_label(center_x + 35, center_y + 10, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 35, center_y + 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI
-        draw_label(center_x + 10, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x - 20, center_y + 35, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       elsif current_angle == Math::PI + (Math::PI / 2)
-        draw_label(center_x + 35, center_y + 10, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
+        draw_label(center_x + 35, center_y - 20, current_angle, data_row[DATA_VALUES_INDEX].first + 15, data_row[DATA_VALUES_INDEX].first.to_s)
       end
       
       current_angle += additive_angle
